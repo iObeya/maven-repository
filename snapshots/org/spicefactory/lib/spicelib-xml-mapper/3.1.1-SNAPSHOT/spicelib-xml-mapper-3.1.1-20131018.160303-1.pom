@@ -8,7 +8,7 @@
         <version>3.1.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spicelib-logging</artifactId>
+    <artifactId>spicelib-xml-mapper</artifactId>
     <packaging>swc</packaging>
     <name>${project.groupId} ${project.artifactId} ${project.version}</name>
     <description>${project.groupId} ${project.artifactId} ${project.version}</description>
@@ -47,10 +47,16 @@
 	                    <warn-no-constructor>false</warn-no-constructor>
 	                </compilerWarnings>
                     <keepAs3Metadatas>
-						<keepAs3Metadata>Init</keepAs3Metadata>
+						<keepAs3Metadata>XmlMapping</keepAs3Metadata>
+						<keepAs3Metadata>Attribute</keepAs3Metadata>
+						<keepAs3Metadata>TextNode</keepAs3Metadata>
+						<keepAs3Metadata>ChildTextNode</keepAs3Metadata>
+						<keepAs3Metadata>ChoiceId</keepAs3Metadata>
+						<keepAs3Metadata>ChoiceType</keepAs3Metadata>
+						<keepAs3Metadata>Ignore</keepAs3Metadata>
 					</keepAs3Metadatas>
 					<includeTestFiles>
-		              <param>LoggingTest.as</param>
+		              <param>XmlMapperSuite.as</param>
 		            </includeTestFiles>
                 </configuration>
             </plugin>
@@ -65,5 +71,12 @@
     		<type>swc</type>
     	</dependency>
     	
+    	<dependency>
+    		<groupId>org.spicefactory.lib</groupId>
+    		<artifactId>spicelib-reflect</artifactId>
+    		<version>${project.version}</version>
+    		<type>swc</type>
+    	</dependency>
+    
     </dependencies>
 </project>
