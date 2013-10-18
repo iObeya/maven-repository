@@ -20,7 +20,7 @@
         <flex-verbose-stacktraces>true</flex-verbose-stacktraces>
         <flex-mojos.version>4.0-RC2</flex-mojos.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <internal.repository.location>file://${user.dir}/target/mvn-repository</internal.repository.location>
+        <internal.repository.location>file://${project.build.directory}/mvn-repository</internal.repository.location>
         <github.global.server>github</github.global.server>
     </properties>
 
