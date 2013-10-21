@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.spicefactory.parsley</groupId>
+  <artifactId>parsley-core</artifactId>
+  <versioning>
+    <versions>
+      <version>3.0.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20131021095224</lastUpdated>
+  </versioning>
+</metadata>
