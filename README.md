@@ -8,4 +8,4 @@ Releases repository url :
 - https://raw.github.com/KapIT/maven-repository/master/
 
 Snapshots repository url : 
-- https://raw.github.com/KapIT/maven-repository/master/
+- https://raw.github.com/KapIT/maven-repository/snapshots/
