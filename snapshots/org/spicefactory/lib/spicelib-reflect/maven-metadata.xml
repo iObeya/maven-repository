@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.spicefactory.lib</groupId>
+  <artifactId>spicelib-reflect</artifactId>
+  <versioning>
+    <versions>
+      <version>3.1.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20131021095019</lastUpdated>
+  </versioning>
+</metadata>
