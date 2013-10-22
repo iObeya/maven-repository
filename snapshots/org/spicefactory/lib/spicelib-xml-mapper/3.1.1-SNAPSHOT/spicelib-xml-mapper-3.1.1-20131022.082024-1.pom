@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.spicefactory.lib</groupId>
+        <artifactId>spicelib</artifactId>
+        <version>3.1.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>spicelib-xml-mapper</artifactId>
+    <packaging>swc</packaging>
+    <name>${project.groupId} ${project.artifactId} ${project.version}</name>
+    <description>${project.groupId} ${project.artifactId} ${project.version}</description>
+
+
+    <build>
+        <sourceDirectory>src/main</sourceDirectory>
+        <testSourceDirectory>src/test</testSourceDirectory>
+        <resources>
+        	<resource>
+        		<directory>src/resources</directory>
+        	</resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.sonatype.flexmojos</groupId>
+                <artifactId>flexmojos-maven-plugin</artifactId>
+                <version>${flex-mojos.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.adobe.flex</groupId>
+                        <artifactId>compiler</artifactId>
+                        <version>${flex.sdk.version}</version>
+                        <type>pom</type>
+                    </dependency>
+                </dependencies>
+
+                <extensions>true</extensions>
+
+                <configuration>
+                    <debug>${flex-debug}</debug>
+                    <optimize>${flex-optimize}</optimize>
+                    <verboseStacktraces>${flex-verbose-stacktraces}</verboseStacktraces>
+                    <targetPlayer>${player.version}</targetPlayer>
+                    <includeSources>
+                        <param>${project.build.sourceDirectory}</param>
+                    </includeSources>
+                    <allowSourcePathOverlap>true</allowSourcePathOverlap>
+                    <showWarnings>true</showWarnings>
+                    <compilerWarnings>
+	                    <warn-no-constructor>false</warn-no-constructor>
+	                </compilerWarnings>
+                    <keepAs3Metadatas>
+						<keepAs3Metadata>XmlMapping</keepAs3Metadata>
+						<keepAs3Metadata>Attribute</keepAs3Metadata>
+						<keepAs3Metadata>TextNode</keepAs3Metadata>
+						<keepAs3Metadata>ChildTextNode</keepAs3Metadata>
+						<keepAs3Metadata>ChoiceId</keepAs3Metadata>
+						<keepAs3Metadata>ChoiceType</keepAs3Metadata>
+						<keepAs3Metadata>Ignore</keepAs3Metadata>
+					</keepAs3Metadatas>
+					<includeTestFiles>
+		              <param>XmlMapperSuite.as</param>
+		            </includeTestFiles>
+		            <includeFiles>
+            		 	<include>metadata.xml</include>
+            		</includeFiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+    <dependencies>
+    	<dependency>
+    		<groupId>org.spicefactory.lib</groupId>
+    		<artifactId>spicelib-util</artifactId>
+    		<version>${project.version}</version>
+    		<type>swc</type>
+    	</dependency>
+    	
+    	<dependency>
+    		<groupId>org.spicefactory.lib</groupId>
+    		<artifactId>spicelib-reflect</artifactId>
+    		<version>${project.version}</version>
+    		<type>swc</type>
+    	</dependency>
+    
+    </dependencies>
+</project>
